@@ -9,9 +9,13 @@ services:
         volumes:
             - ./nginx.conf:/etc/nginx/nginx.conf
         networks:
+            - proxybroker_net
             - igoods_net
 
 networks:
   igoods_net:
     external:
       name: igoods_default
+  proxybroker_net:
+    external:
+      name: proxybroker_default
