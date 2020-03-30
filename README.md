@@ -47,11 +47,11 @@ add dev host to /etc/hosts
 
     sudo -- bash -c "echo 127.0.0.1 newservice.mydomain.com_dev >> /etc/hosts"
 
-add new dns CNAME to GCP 
+add new dns CNAME to GCP (grachev - zone name, grachev.space - domain, airflow.proxybroker.grachev.space - new subdomain) 
 
-    gcloud dns --project=valiant-striker-270420 record-sets transaction start --zone=mydomain
-    gcloud dns --project=valiant-striker-270420 record-sets transaction add mydomain.com. --name=newservice.domain.com. --ttl=300 --type=CNAME --zone=mydomain
-    gcloud dns --project=valiant-striker-270420 record-sets transaction execute --zone=mydomain
+    gcloud dns --project=valiant-striker-270420 record-sets transaction start --zone=grachev
+    gcloud dns --project=valiant-striker-270420 record-sets transaction add grachev.space. --name=airflow.proxybroker.grachev.space. --ttl=300 --type=CNAME --zone=grachev
+    gcloud dns --project=valiant-striker-270420 record-sets transaction execute --zone=grachev
     
 ##(Re)start reverse_proxy
 Stop existing container, if container is already running: 
