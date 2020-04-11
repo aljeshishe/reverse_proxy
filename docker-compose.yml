@@ -12,6 +12,7 @@ services:
             - avito_net
             - proxybroker_net
             - igoods_net
+            - finance_net
 
 networks:
   igoods_net:
@@ -23,3 +24,6 @@ networks:
   avito_net:
     external:
       name: avito_default
+  finance_net:
+    external:
+      name: finance_default

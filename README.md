@@ -45,7 +45,8 @@ add new network to services.networks and networks in docker-compose.yml
 
 add dev host to /etc/hosts 
 
-    sudo -- bash -c "echo 127.0.0.1 newservice.mydomain.com_dev >> /etc/hosts"
+    sudo -- bash -c "echo 127.0.0.1 jupyter.finance.grachev.space_dev >> /etc/hosts"
+    sudo -- bash -c "echo 127.0.0.1 finance.grachev.space_dev >> /etc/hosts"
 
 add new dns CNAME to GCP (grachev - zone name, grachev.space - domain, airflow.proxybroker.grachev.space - new subdomain) 
 
